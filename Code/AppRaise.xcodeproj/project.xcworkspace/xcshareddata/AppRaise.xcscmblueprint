@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ce56697d-8096-42d3-a299-abbc8cd18d6f",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "ce56697d-8096-42d3-a299-abbc8cd18d6f" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "d3193629-8150-471a-afe2-908e6c726806" : 0,
+    "ce56697d-8096-42d3-a299-abbc8cd18d6f" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1D0A52AE-B3F5-415E-A4C3-36F8493A3E9E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "d3193629-8150-471a-afe2-908e6c726806" : "AppraiseMe_3",
+    "ce56697d-8096-42d3-a299-abbc8cd18d6f" : "AppraiseME_Red_Car_app\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AppRaise",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/Code\/AppRaise.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/smikeapps.svn.cloudforge.com\/appraiseme_red_car_app_code",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ce56697d-8096-42d3-a299-abbc8cd18d6f"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/smikeapps.svn.cloudforge.com\/appraiseme_3",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "d3193629-8150-471a-afe2-908e6c726806"
+    }
+  ]
+}

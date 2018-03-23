@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2" userLabel="AppraiseView" customClass="APAppraiseView">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="450"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="AppRaiseView.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="17" y="14" width="287" height="411"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="287" id="UP2-Yk-4vf"/>
+                        <constraint firstAttribute="height" constant="411" id="p2z-AL-pNy"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                    <rect key="frame" x="281" y="-1" width="47" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="47" id="Nia-HE-BMk"/>
+                        <constraint firstAttribute="height" constant="44" id="tf1-w8-LzF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal" image="cancel.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeBtnAction:" destination="2" eventType="touchUpInside" id="6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="-3" id="5V7-96-Jva"/>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" constant="25" id="C2f-wt-a9h"/>
+                <constraint firstItem="5" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="281" id="MO2-JV-dWe"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="2" secondAttribute="top" constant="14" id="P0g-Zc-CBf"/>
+                <constraint firstItem="5" firstAttribute="top" secondItem="2" secondAttribute="top" constant="-1" id="Uae-ti-rXH"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="21" id="a8l-5v-BDi"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="17" id="mKs-Ei-t8W"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="AppRaiseView.png" width="288" height="432"/>
+        <image name="cancel.png" width="47" height="44"/>
+    </resources>
+</document>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APPDFDisplayViewController">
+            <connections>
+                <outlet property="acuraTab" destination="7" id="10"/>
+                <outlet property="homeTab" destination="8" id="11"/>
+                <outlet property="pdfWebView" destination="5" id="14"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" image="APPRaiseBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="480" id="Fva-B9-dJD"/>
+                        <constraint firstAttribute="width" constant="320" id="anv-bc-Yv0"/>
+                    </constraints>
+                </imageView>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="4zc-vo-Fkf"/>
+                        <constraint firstAttribute="height" constant="430" id="9GB-Oi-c8w"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="1" id="13"/>
+                    </connections>
+                </webView>
+                <tabBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                    <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="3o9-wb-qvP"/>
+                        <constraint firstAttribute="width" constant="320" id="YHD-OY-xAz"/>
+                    </constraints>
+                    <items>
+                        <tabBarItem title="Home" image="HomeTab.png" id="8"/>
+                        <tabBarItem title="MADE BY ACURA MULTIMEDIA" image="AcuraTab.png" id="7"/>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="12"/>
+                    </connections>
+                </tabBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYF-mi-CfU">
+                    <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="TabBarBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="HU6-7d-RwT">
+                            <rect key="frame" x="0.0" y="1" width="320" height="47"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBG-97-NW8">
+                            <rect key="frame" x="40" y="3" width="82" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="B0x-aF-F8w"/>
+                                <constraint firstAttribute="width" constant="82" id="ZHz-U5-P4s"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" image="HomeTab.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onHomeButtonAction:" destination="-1" eventType="touchUpInside" id="oJC-tP-3Uw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gE-s6-6hQ">
+                            <rect key="frame" x="196" y="5" width="82" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="aVZ-1Z-O31"/>
+                                <constraint firstAttribute="width" constant="82" id="zgE-2u-2g5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" image="AcuraTab.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onAcuraButtonAction:" destination="-1" eventType="touchUpInside" id="Amr-Rh-JHI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="6gE-s6-6hQ" firstAttribute="leading" secondItem="BBG-97-NW8" secondAttribute="trailing" constant="74" id="3vI-Br-1Ri"/>
+                        <constraint firstItem="6gE-s6-6hQ" firstAttribute="leading" secondItem="BBG-97-NW8" secondAttribute="trailing" constant="74" id="84p-u7-NyM"/>
+                        <constraint firstAttribute="width" constant="320" id="M6J-1E-si7"/>
+                        <constraint firstAttribute="height" constant="49" id="TmT-HK-NSq"/>
+                        <constraint firstAttribute="trailing" secondItem="6gE-s6-6hQ" secondAttribute="trailing" constant="42" id="XN2-rT-b3n"/>
+                        <constraint firstItem="BBG-97-NW8" firstAttribute="top" secondItem="NYF-mi-CfU" secondAttribute="top" constant="3" id="ZOv-cW-PtB"/>
+                        <constraint firstItem="6gE-s6-6hQ" firstAttribute="top" secondItem="NYF-mi-CfU" secondAttribute="top" constant="5" id="eDv-jk-TvA"/>
+                        <constraint firstItem="BBG-97-NW8" firstAttribute="leading" secondItem="NYF-mi-CfU" secondAttribute="leading" constant="40" id="wzN-e0-30a"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="Dh6-bO-Yla"/>
+                <constraint firstItem="6" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="1" id="GHG-f6-hK7"/>
+                <constraint firstItem="6" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Kma-Bb-YhN"/>
+                <constraint firstItem="NYF-mi-CfU" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="LZC-r8-QLJ"/>
+                <constraint firstAttribute="bottom" secondItem="6" secondAttribute="bottom" id="R2e-V6-69c"/>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="UPO-hK-9la"/>
+                <constraint firstItem="NYF-mi-CfU" firstAttribute="top" secondItem="6" secondAttribute="top" id="hZR-tc-GLH"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="hra-OJ-vUL"/>
+                <constraint firstAttribute="trailing" secondItem="6" secondAttribute="trailing" id="jp2-Ra-tUO"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="rF3-Hp-aJu"/>
+                <constraint firstItem="5" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="xSu-lV-wpv"/>
+                <constraint firstItem="5" firstAttribute="top" secondItem="1" secondAttribute="top" id="xmb-Z3-CGQ"/>
+                <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="xxT-7z-JQh"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="APPRaiseBg.png" width="321" height="481"/>
+        <image name="AcuraTab.png" width="82" height="40"/>
+        <image name="HomeTab.png" width="33" height="43"/>
+        <image name="TabBarBg.png" width="320" height="47"/>
+    </resources>
+</document>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APReportViewController">
+            <connections>
+                <outlet property="acuraTab" destination="36" id="39"/>
+                <outlet property="bgImageView" destination="22" id="YHY-Vc-IyD"/>
+                <outlet property="hometab" destination="35" id="38"/>
+                <outlet property="savedRecordsTbl" destination="26" id="32"/>
+                <outlet property="selectedMonthLbl" destination="30" id="31"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="26" userLabel="Table View">
+                    <rect key="frame" x="0.0" y="120" width="320" height="181"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="6EZ-d4-bNb"/>
+                        <constraint firstAttribute="height" constant="181" id="pfS-Vd-yxf"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="28"/>
+                        <outlet property="delegate" destination="-1" id="29"/>
+                    </connections>
+                </tableView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="top" image="viewAllrecordsBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="480" id="iFG-fE-aBL"/>
+                        <constraint firstAttribute="width" constant="320" id="tpR-za-U7h"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24">
+                    <rect key="frame" x="239" y="360" width="61" height="59"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="59" id="UIg-Rn-vGs"/>
+                        <constraint firstAttribute="width" constant="61" id="YxR-UU-uUO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal" image="trash.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteRecordsBtnAction:" destination="-1" eventType="touchUpInside" id="33"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Delete Records Older than 1 month" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="25">
+                    <rect key="frame" x="20" y="379" width="211" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="211" id="8TE-ld-m0n"/>
+                        <constraint firstAttribute="height" constant="21" id="Uxv-js-UWo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Resend Specific Report" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="42">
+                    <rect key="frame" x="20" y="325" width="211" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="211" id="KEm-m3-FjU"/>
+                        <constraint firstAttribute="height" constant="21" id="lJn-Wy-PMW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="monthHeader.png" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                    <rect key="frame" x="12" y="73" width="296" height="31"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="296" id="6jK-IA-oX6"/>
+                        <constraint firstAttribute="height" constant="31" id="FcV-19-kUH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="30">
+                    <rect key="frame" x="13" y="75" width="293" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="293" id="qeh-s7-orR"/>
+                        <constraint firstAttribute="height" constant="27" id="rgm-57-feP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tabBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34">
+                    <rect key="frame" x="0.0" y="430" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="Yk2-Ma-kvx"/>
+                        <constraint firstAttribute="height" constant="49" id="Ztz-F3-HT2"/>
+                    </constraints>
+                    <items>
+                        <tabBarItem title="Home" image="HomeTab.png" id="35"/>
+                        <tabBarItem title="MADE BY ACURA MULTIMEDIA" image="AcuraTab.png" id="36"/>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="37"/>
+                    </connections>
+                </tabBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="6eJ-0n-a0p"/>
+                        <constraint firstAttribute="height" constant="58" id="Acx-ZL-WTi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="appRaiseButtonAction:" destination="-1" eventType="touchUpInside" id="41"/>
+                    </connections>
+                </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ReSendImg.png" translatesAutoresizingMaskIntoConstraints="NO" id="43">
+                    <rect key="frame" x="248" y="316" width="42" height="39"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="SKq-rh-rgJ"/>
+                        <constraint firstAttribute="width" constant="42" id="UZA-6h-nZz"/>
+                    </constraints>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaW-1z-Xcn">
+                    <rect key="frame" x="200" y="433" width="82" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="AcuraTab.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odp-0q-wFT">
+                    <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="TabBarBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="9hO-HI-37t">
+                            <rect key="frame" x="0.0" y="1" width="320" height="47"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZL-md-l4n">
+                            <rect key="frame" x="40" y="3" width="82" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="c4p-Au-eYt"/>
+                                <constraint firstAttribute="width" constant="82" id="qLK-9R-VgD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" image="HomeTab.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onHomeButtonAction:" destination="-1" eventType="touchUpInside" id="Wbf-bt-YOc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-6j-FQf">
+                            <rect key="frame" x="196" y="5" width="82" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="GyD-x8-lRb"/>
+                                <constraint firstAttribute="width" constant="82" id="RcB-TQ-hHx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" image="AcuraTab.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onAcuraButtonAction:" destination="-1" eventType="touchUpInside" id="znN-Bh-BTI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="O5a-6j-FQf" firstAttribute="leading" secondItem="9ZL-md-l4n" secondAttribute="trailing" constant="74" id="4q1-ol-Otd"/>
+                        <constraint firstItem="9ZL-md-l4n" firstAttribute="top" secondItem="Odp-0q-wFT" secondAttribute="top" constant="3" id="7eS-Lg-Q0c"/>
+                        <constraint firstItem="O5a-6j-FQf" firstAttribute="top" secondItem="Odp-0q-wFT" secondAttribute="top" constant="5" id="Bp9-wd-RFE"/>
+                        <constraint firstItem="O5a-6j-FQf" firstAttribute="leading" secondItem="9ZL-md-l4n" secondAttribute="trailing" constant="74" id="Eeo-ow-ZQV"/>
+                        <constraint firstAttribute="width" constant="320" id="K8P-Yo-6LY"/>
+                        <constraint firstAttribute="height" constant="49" id="KxJ-kX-Brf"/>
+                        <constraint firstAttribute="trailing" secondItem="O5a-6j-FQf" secondAttribute="trailing" constant="42" id="gX2-Vg-VkY"/>
+                        <constraint firstItem="9ZL-md-l4n" firstAttribute="leading" secondItem="Odp-0q-wFT" secondAttribute="leading" constant="40" id="xtQ-Tt-E1f"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.13333334029999999" green="0.13333334029999999" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstItem="24" firstAttribute="leading" secondItem="25" secondAttribute="trailing" constant="8" id="0he-pb-GuJ"/>
+                <constraint firstItem="24" firstAttribute="leading" secondItem="25" secondAttribute="trailing" constant="8" id="4XE-Tt-RQz"/>
+                <constraint firstItem="27" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="12" id="5DH-BL-6PP"/>
+                <constraint firstItem="25" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="605-vS-V6x"/>
+                <constraint firstItem="26" firstAttribute="top" secondItem="27" secondAttribute="bottom" constant="16" id="8fm-8X-wGv"/>
+                <constraint firstItem="34" firstAttribute="top" secondItem="24" secondAttribute="bottom" constant="11" id="9hE-4K-vR7"/>
+                <constraint firstItem="Odp-0q-wFT" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Bp9-PT-5VN"/>
+                <constraint firstAttribute="trailing" secondItem="26" secondAttribute="trailing" id="EWx-Ud-KFK"/>
+                <constraint firstItem="42" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="Gg7-Xi-ous"/>
+                <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" id="H1f-JO-cLE"/>
+                <constraint firstAttribute="bottom" secondItem="34" secondAttribute="bottom" constant="1" id="Hth-zy-dgz"/>
+                <constraint firstAttribute="trailing" secondItem="24" secondAttribute="trailing" constant="20" id="Lah-MW-aQA"/>
+                <constraint firstAttribute="trailing" secondItem="30" secondAttribute="trailing" constant="14" id="MUN-Zq-mgn"/>
+                <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="12" id="NUg-28-uaj"/>
+                <constraint firstAttribute="trailing" secondItem="34" secondAttribute="trailing" id="RNZ-2x-s9P"/>
+                <constraint firstAttribute="trailing" secondItem="40" secondAttribute="trailing" id="Rc7-5q-lxc"/>
+                <constraint firstItem="30" firstAttribute="top" secondItem="40" secondAttribute="bottom" constant="17" id="bXC-D5-8vE"/>
+                <constraint firstAttribute="trailing" secondItem="43" secondAttribute="trailing" constant="30" id="bZr-wV-87q"/>
+                <constraint firstItem="30" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="13" id="cgf-HY-Rxt"/>
+                <constraint firstItem="22" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ebo-Da-mNP"/>
+                <constraint firstItem="34" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="g2q-Ut-Je7"/>
+                <constraint firstItem="40" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="gbY-jX-03N"/>
+                <constraint firstAttribute="trailing" secondItem="Odp-0q-wFT" secondAttribute="trailing" id="jg5-zi-uab"/>
+                <constraint firstAttribute="bottom" secondItem="22" secondAttribute="bottom" id="juL-z9-XeQ"/>
+                <constraint firstItem="43" firstAttribute="leading" secondItem="42" secondAttribute="trailing" constant="17" id="k53-aT-n9o"/>
+                <constraint firstItem="34" firstAttribute="top" secondItem="25" secondAttribute="bottom" constant="30" id="l1N-LD-YOc"/>
+                <constraint firstItem="43" firstAttribute="leading" secondItem="42" secondAttribute="trailing" constant="17" id="lEr-fh-r0q"/>
+                <constraint firstItem="27" firstAttribute="top" secondItem="40" secondAttribute="bottom" constant="15" id="lh4-81-Rhe"/>
+                <constraint firstItem="22" firstAttribute="top" secondItem="1" secondAttribute="top" id="lk3-c3-aBO"/>
+                <constraint firstAttribute="bottom" secondItem="Odp-0q-wFT" secondAttribute="bottom" id="nws-KT-NH8"/>
+                <constraint firstItem="40" firstAttribute="top" secondItem="1" secondAttribute="top" id="tjl-fl-Yej"/>
+                <constraint firstItem="26" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="uN7-Ho-HCQ"/>
+                <constraint firstItem="24" firstAttribute="top" secondItem="43" secondAttribute="bottom" constant="5" id="vfh-IE-LTH"/>
+                <constraint firstItem="25" firstAttribute="top" secondItem="42" secondAttribute="bottom" constant="33" id="wsX-LU-AkR"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AcuraTab.png" width="82" height="40"/>
+        <image name="HomeTab.png" width="33" height="43"/>
+        <image name="ReSendImg.png" width="42" height="39"/>
+        <image name="TabBarBg.png" width="320" height="47"/>
+        <image name="monthHeader.png" width="296" height="31"/>
+        <image name="trash.png" width="61" height="59"/>
+        <image name="viewAllrecordsBg.png" width="320" height="480"/>
+    </resources>
+</document>

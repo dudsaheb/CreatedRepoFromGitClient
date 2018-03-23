@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1D0A52AE-B3F5-415E-A4C3-36F8493A3E9E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AppRaise</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>d3193629-8150-471a-afe2-908e6c726806</key>
+		<string>https://smikeapps.svn.cloudforge.com/appraiseme_3</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/Code/AppRaise.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>d3193629-8150-471a-afe2-908e6c726806</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>d3193629-8150-471a-afe2-908e6c726806</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>d3193629-8150-471a-afe2-908e6c726806</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AppraiseMe_3</string>
+		</dict>
+	</array>
+</dict>
+</plist>

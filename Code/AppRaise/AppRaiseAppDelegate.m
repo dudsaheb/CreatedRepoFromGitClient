@@ -1,0 +1,105 @@
+//
+//  AppRaiseAppDelegate.m
+//  AppRaise
+//
+//  Created by anilOruganti on 18/04/12.
+//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import "AppRaiseAppDelegate.h"
+#import "APCoreDataHelper.h"
+
+@implementation AppRaiseAppDelegate
+
+
+@synthesize window=_window;
+@synthesize vehicleFormDataDictionary;
+@synthesize photosCollectionDict;
+@synthesize appCtrl;
+@synthesize switchTagValue;
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Override point for customization after application launch.
+    
+    NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] init];
+    self.vehicleFormDataDictionary = tempDict;
+    [tempDict release];
+    
+    NSMutableDictionary *tempPhotoDict = [[NSMutableDictionary alloc] init];
+    self.photosCollectionDict = tempPhotoDict;
+    [tempPhotoDict release];
+
+    
+    
+    UIViewController* vc = [[UIViewController alloc]initWithNibName:nil bundle:nil];
+    self.window.rootViewController = vc;
+    [self.window.rootViewController.view setBackgroundColor:[UIColor clearColor]];
+    
+    
+    appCtrl = [[APAppController alloc] initWithWindow:self.window];
+    [appCtrl loadSplashScreen];
+    
+    
+    // initial switch tagValue is 0
+    self.switchTagValue = 0;
+   
+    
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    /*
+     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+     */
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    /*
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+     */
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    /*
+     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+     */
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    /*
+     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+     */
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    // Saves changes in the application's managed object context before the application terminates.
+    [[APCoreDataHelper sharedCoreDataHelper] saveContext];
+}
+
+- (void)dealloc
+{
+    self.vehicleFormDataDictionary = nil;
+    self.photosCollectionDict = nil;
+    [_window release];
+    [super dealloc];
+}
+
+- (void)awakeFromNib
+{
+    /*
+     Typically you should set up the Core Data stack here, usually by passing the managed object context to the first view controller.
+     self.<#View controller#>.managedObjectContext = self.managedObjectContext;
+    */
+}
+
+
+@end

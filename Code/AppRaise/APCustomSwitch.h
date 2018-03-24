@@ -10,6 +10,8 @@
 
 @protocol APCustomSwitchDelegate <NSObject>
 
+// Checking how to commit interbranch via terminal
+
 @optional
 - (void)onOffButtonActionDelegate:(BOOL)switchStatus withSwitchTag:(NSInteger)switchTag;
 - (void)didOffbuttonSelected:(CGRect)rect withSwitchTag:(NSInteger)switchTag;
